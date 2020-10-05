@@ -1,0 +1,351 @@
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    background-color: #fff;
+    width: 10px;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px 0 0 20px;
+    background-color: #000;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.center{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.justify{
+    text-align: justify;
+    padding: 20px;
+}
+
+.id-position{
+    position: relative;
+    height: 62px;
+    width: 100%;
+}
+
+.dark-mode-text{
+    color: white;
+}
+
+.dark-mode-background{
+    background: #000;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+p.text{
+    font-size: 15px;
+}
+
+
+img.icon{
+    text-align: center;
+    width: 50px;
+    height: 50px;    
+}
+
+.row{
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+.break-line{
+    height: 2px;
+    background: #000;
+}
+
+.burger{
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    right: 0;
+    background: #ffffff;
+    z-index: 1001;
+    display: none;
+}
+
+.burger span{
+    height: 2px;
+    width: 30px;
+    position: fixed;
+    right: 15px;
+    top: 29px;
+    background: #000;
+}
+
+.burger span::before{
+    content: "";
+    height: 2px;
+    width: 30px;
+    position: fixed;
+    right: 15px;
+    background: #000;
+    top: 20px;
+}
+
+.burger span::after{
+    content: "";
+    height: 2px;
+    width: 30px;
+    position: fixed;
+    right: 15px;
+    background: #000;
+    top: 38px;
+}
+
+.burger.open span{
+    transform: rotate(45deg);
+    top: 29px;
+}
+
+.burger.open span::before{
+    content: "";
+    transform: rotate(90deg);
+    top: 0;
+    left: 0;
+}
+
+.burger.open span::after{
+    content: "";
+    transform: rotate(0deg);
+    display: none;
+}
+
+/* Profile */
+
+.navbar{
+    position: fixed;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    top: 0;
+    transition: .5s ease-in-out;
+}
+
+.navbar .resume-photo{
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 5px;
+    position: fixed;
+}
+
+.navbar .nav-text{
+    position: fixed;
+    left: 60px;
+    line-height: 42px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    line-height: 60px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    height: 60px;
+}
+
+.navbar ul li a{
+    display: block;
+    padding: 0 20px;
+    color: #000;
+}
+
+.navbar ul li a:hover{
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+}
+
+
+
+/* Navbar card type */
+
+
+.navbar-top .resume-photo{
+    width: 200px;
+    height: 200px;
+    float: right;
+    top: 10px;
+    margin: 0;
+    z-index: 10;
+    border-radius: 0 20px 20px 0;
+    border-left: white solid 1px;
+
+}
+
+.navbar-top .description-frame{
+    padding: 20px 10px;
+    word-break: keep-all;
+}
+
+.navbar-top .description-frame .card{
+    border-top-right-radius: 0;
+}
+/* Education frame */
+
+h2,h4{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.education-frame .sub-frame{
+    padding: 20px 20px;
+}
+
+p.justify{
+    color: #000;
+    text-align: justify;
+}
+
+/* Skills frame */
+
+.skills-frame ol,
+.skills-frame ul{
+    padding: 20px 100px;
+}
+
+
+.card-columns{
+    background: rgb(255, 255, 255);
+    border: none;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.card-columns .icon{
+    margin: 20px 0;
+}
+
+.card-columns .card-text{
+    padding: 20px 10px;
+}
+
+
+/* experience-frame / all frame */
+
+.frame .card{
+    padding: 20px 30px;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.education-frame .card{
+    min-height: 300px;
+}
+
+.experience-frame .card{
+    min-height: 400px;
+}
+
+.volunteer-frame .card{
+    min-height: 200px;
+}
+
+/* Reference frame */
+
+.reference-frame .row .card {
+    min-height: 250px;
+}
+
+
+/* Form frame */
+
+textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+
+.card.form{
+    padding: 20px 30px;
+    margin: 20px 30px;
+}
+
+.form-frame .row{
+    margin-bottom: 0;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.form-control:focus{
+    border: black 1px solid;
+    box-shadow: rgb(0, 0, 0) 0 0 5px 0;
+}
+
+.btn.btn-secondary.form-control{
+    margin-top: 30px;
+}
+
+
+/* Footer */
+
+footer{
+    padding: 5px 0!important;
+    background: #fff;
+    color: #000;
+}
+
+
+/* Media resolution */
+
+
+@media only screen and (max-width:576px){
+    .card-columns .icon{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width:765px){
+    .navbar-top .resume-photo{
+        width: 100px;
+        height: 100px;
+        position: sticky;
+        top: 0;
+        border: none;
+        left: calc(100% - 50px);
+    }
+    
+    .navbar ul{
+        display: block;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        background: white;
+        height: fit-content;
+        transition: .5s ease;
+        z-index: 999;
+    }
+
+    .navbar ul{
+        left: -100vh;
+        top: 60px;
+    }
+
+    .navbar ul.show{
+        left: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+}
